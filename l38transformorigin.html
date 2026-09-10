@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transform Origin</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+        <style type="text/css">
+        
+
+            .box{
+                width: 100px;
+                height: 100px;
+                border: 1px solid red;
+
+                margin: 20px;
+            }
+
+            .box img{
+                width: 100px;
+                height: 100px;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <h1>This is tailwind css using CDN Link</h1>
+
+        <div class="box">
+            <img src="./img/cutedog.jpg" class="rotate-45 origin-center" alt="cutedog">
+        </div>
+
+        <hr/>
+
+        <div class="box">
+            <img src="./img/cutedog.jpg" class="rotate-45 origin-left" alt="cutedog">
+        </div>
+
+        <hr/>
+
+        <div class="box">
+            <img src="./img/cutedog.jpg" class="rotate-45 origin-right" alt="cutedog">
+        </div>
+
+        <hr/>
+
+        <div class="box">
+            <img src="./img/cutedog.jpg" class="rotate-45 origin-top" alt="cutedog">
+        </div>
+
+        <hr/>
+
+        <div class="box">
+            <img src="./img/cutedog.jpg" class="rotate-45 origin-bottom" alt="cutedog">
+        </div>
+
+        <hr/>
+
+        <div class="box">
+            <img src="./img/cutedog.jpg" class="rotate-45 origin-top-left" alt="cutedog">
+        </div>
+
+        <hr/>
+
+        <div class="box">
+            <img src="./img/cutedog.jpg" class="rotate-45 origin-top-right" alt="cutedog">
+        </div>
+
+        <hr/>
+
+        <div class="box">
+            <img src="./img/cutedog.jpg" class="rotate-45 origin-bottom-left" alt="cutedog">
+        </div>
+
+        <hr/>
+
+        <div class="box">
+            <img src="./img/cutedog.jpg" class="rotate-45 origin-bottom-right" alt="cutedog">
+        </div>
+
+        <hr/>
+
+    </body>
+</html> 
+
+<!--
+
+origin-center           transform-origin:center;
+origin-left
+origi-right
+origi-top
+origi-bottom 
+
+
+origin-top-left         transform-origin:left top;
+origin-top-right        transform-origin:right top;
+origi-bottom-left       transform-origin:left bottom;
+origi-bottom-right      transform-origin:right bottom;
+
+
+
+
+-->
+
+
+
+
