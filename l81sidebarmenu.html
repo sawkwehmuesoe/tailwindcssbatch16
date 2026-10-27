@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Side Bar Menu</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    <body class="bg-stone-900">
+    
+        <section class="flex">
+
+            <div class="w-16 h-screen bg-white flex flex-col items-center py-8 space-y-8">
+
+                <a href="javascript:void(0);" class="text-gray-500 rounded-lg p-2 transition-colors duration-200 hover:bg-gray-100 hover:text-gray-600"><i class="fas fa-home"></i></a>
+                <a href="javascript:void(0);" class="bg-blue-100 rounded-lg p-2 transition-colors duration-200 hover:bg-gray-100 hover:text-gray-600"><i class="fas fa-users"></i></a>
+                <a href="javascript:void(0);" class="text-gray-500 rounded-lg p-2 transition-colors duration-200 hover:bg-gray-100 hover:text-gray-600"><i class="fas fa-chart-bar"></i></a>
+                <a href="javascript:void(0);" class="text-gray-500 rounded-lg p-2 transition-colors duration-200 hover:bg-gray-100 hover:text-gray-600"><i class="fas fa-chart-pie"></i></a>
+                <a href="javascript:void(0);" class="text-gray-500 rounded-lg p-2 transition-colors duration-200 hover:bg-gray-100 hover:text-gray-600"><i class="fas fa-envelope"></i></a>
+                <a href="javascript:void(0);" class="text-gray-500 rounded-lg p-2 transition-colors duration-200 hover:bg-gray-100 hover:text-gray-600"><i class="fas fa-cogs"></i></a>
+
+            </div>
+
+            <div class="w-64 h-screen bg-white border-l items-center py-8 overflow-y-auto">
+
+                <h3 class="text-gray-700 text-lg font-medium inline px-5">Employees</h3>
+                <p class="text-gray-700 text-sm font-medium inline px-5">10/25</p>
+                <input type="text" name="search" id="search" class="block w-full border border-gray-300 focus:outline-none px-4 py-2" placeholder="Search...">
+
+                <div class="mt-8 space-y-5">
+                    <button class="w-full flex items-center border-b px-5 gap-x-3.5 transition-color duration-300 hover:bg-gray-400 focus:outline-none">
+                        <img src="./img/cutedog.jpg" class="w-10 h-10 object-cover rounded-full" alt="user1">
+                        <div class="text-left">
+                            <h3 class="text-small text-gray-700 font-medium capitalize">Mi Su</h3>
+                            <p class="text-xs text-gray-500">BDO</p>
+                            <p class="text-xs text-gray-500">2020 ~ up to now</p>
+                        </div>
+                    </button>
+
+                    <button class="w-full flex items-center border-b px-5 gap-x-3.5 transition-color duration-300 hover:bg-gray-400 focus:outline-none">
+                        <img src="./img/cutepurpy.jpg" class="w-10 h-10 object-cover rounded-full" alt="user2">
+                        <div class="text-left">
+                            <h3 class="text-small text-gray-700 font-medium capitalize">Aung Kyaw</h3>
+                            <p class="text-xs text-gray-500">BDO</p>
+                            <p class="text-xs text-gray-500">2020 ~ up to now</p>
+                        </div>
+                    </button>
+
+                    <button class="w-full flex items-center border-b px-5 gap-x-3.5 transition-color duration-300 hover:bg-gray-400 focus:outline-none">
+                        <img src="./img/users/user1.jpg" class="w-10 h-10 object-cover rounded-full" alt="user3">
+                        <div class="text-left">
+                            <h3 class="text-small text-gray-700 font-medium capitalize">Nandar</h3>
+                            <p class="text-xs text-gray-500">BDO</p>
+                            <p class="text-xs text-gray-500">2020 ~ up to now</p>
+                        </div>
+                    </button>
+
+                    <button class="w-full flex items-center border-b px-5 gap-x-3.5 transition-color duration-300 hover:bg-gray-400 focus:outline-none">
+                        <img src="./img/cat.jfif" class="w-10 h-10 object-cover rounded-full" alt="user4">
+                        <div class="text-left">
+                            <h3 class="text-small text-gray-700 font-medium capitalize">Ms.Hnin Hnin</h3>
+                            <p class="text-xs text-gray-500">Operation Director</p>
+                            <p class="text-xs text-gray-500">2020 ~ up to now</p>
+                        </div>
+                    </button>
+
+                    <button class="w-full flex items-center border-b px-5 gap-x-3.5 transition-color duration-300 hover:bg-gray-400 focus:outline-none">
+                        <img src="https://i.pinimg.com/736x/94/cd/ff/94cdffde324eb2470c13dc9f511d158e.jpg" class="w-10 h-10 object-cover rounded-full" alt="user5">
+                        <div class="text-left">
+                            <h3 class="text-small text-gray-700 font-medium capitalize">Mr.Naung Naung</h3>
+                            <p class="text-xs text-gray-500">Operation Manager</p>
+                            <p class="text-xs text-gray-500">2020 ~ up to now</p>
+                        </div>
+                    </button>
+
+                    <button class="w-full flex items-center border-b px-5 gap-x-3.5 transition-color duration-300 hover:bg-gray-400 focus:outline-none">
+                        <img src="https://i.pinimg.com/736x/51/b7/c7/51b7c7b86b1cf9c4a8ae50f324b2b69f.jpg" class="w-10 h-10 object-cover rounded-full" alt="user6">
+                        <div class="text-left">
+                            <h3 class="text-small text-gray-700 font-medium capitalize">Ms.Yu Ya</h3>
+                            <p class="text-xs text-gray-500">Operation Manager</p>
+                            <p class="text-xs text-gray-500">2020 ~ up to now</p>
+                        </div>
+                    </button>
+
+                    <button class="w-full flex items-center border-b px-5 gap-x-3.5 transition-color duration-300 hover:bg-gray-400 focus:outline-none">
+                        <img src="https://i.pinimg.com/1200x/4a/6d/3b/4a6d3bb6164b854bdda5b72cfeeda444.jpg" class="w-10 h-10 object-cover rounded-full" alt="user7">
+                        <div class="text-left">
+                            <h3 class="text-small text-gray-700 font-medium capitalize">Mr.Kyaw Min</h3>
+                            <p class="text-xs text-gray-500">Sale Staff</p>
+                            <p class="text-xs text-gray-500">2020 ~ up to now</p>
+                        </div>
+                    </button>
+
+                    <button class="w-full flex items-center border-b px-5 gap-x-3.5 transition-color duration-300 hover:bg-gray-400 focus:outline-none">
+                        <img src="https://i.pinimg.com/1200x/4a/6d/3b/4a6d3bb6164b854bdda5b72cfeeda444.jpg" class="w-10 h-10 object-cover rounded-full" alt="user7">
+                        <div class="text-left">
+                            <h3 class="text-small text-gray-700 font-medium capitalize">Mr.Kyaw Min</h3>
+                            <p class="text-xs text-gray-500">Sale Staff</p>
+                            <p class="text-xs text-gray-500">2020 ~ up to now</p>
+                        </div>
+                    </button>
+
+                    <button class="w-full flex items-center border-b px-5 gap-x-3.5 transition-color duration-300 hover:bg-gray-400 focus:outline-none">
+                        <img src="https://i.pinimg.com/1200x/4a/6d/3b/4a6d3bb6164b854bdda5b72cfeeda444.jpg" class="w-10 h-10 object-cover rounded-full" alt="user7">
+                        <div class="text-left">
+                            <h3 class="text-small text-gray-700 font-medium capitalize">Mr.Kyaw Min</h3>
+                            <p class="text-xs text-gray-500">Sale Staff</p>
+                            <p class="text-xs text-gray-500">2020 ~ up to now</p>
+                        </div>
+                    </button>
+
+                    <button class="w-full flex items-center border-b px-5 gap-x-3.5 transition-color duration-300 hover:bg-gray-400 focus:outline-none">
+                        <img src="https://i.pinimg.com/1200x/4a/6d/3b/4a6d3bb6164b854bdda5b72cfeeda444.jpg" class="w-10 h-10 object-cover rounded-full" alt="user7">
+                        <div class="text-left">
+                            <h3 class="text-small text-gray-700 font-medium capitalize">Mr.Kyaw Min</h3>
+                            <p class="text-xs text-gray-500">Sale Staff</p>
+                            <p class="text-xs text-gray-500">2020 ~ up to now</p>
+                        </div>
+                    </button>
+
+                    <button class="w-full flex items-center border-b px-5 gap-x-3.5 transition-color duration-300 hover:bg-gray-400 focus:outline-none">
+                        <img src="https://i.pinimg.com/1200x/4a/6d/3b/4a6d3bb6164b854bdda5b72cfeeda444.jpg" class="w-10 h-10 object-cover rounded-full" alt="user7">
+                        <div class="text-left">
+                            <h3 class="text-small text-gray-700 font-medium capitalize">Mr.Kyaw Min</h3>
+                            <p class="text-xs text-gray-500">Sale Staff</p>
+                            <p class="text-xs text-gray-500">2020 ~ up to now</p>
+                        </div>
+                    </button>
+
+                    <button class="w-full flex items-center border-b px-5 gap-x-3.5 transition-color duration-300 hover:bg-gray-400 focus:outline-none">
+                        <img src="https://i.pinimg.com/1200x/4a/6d/3b/4a6d3bb6164b854bdda5b72cfeeda444.jpg" class="w-10 h-10 object-cover rounded-full" alt="user7">
+                        <div class="text-left">
+                            <h3 class="text-small text-gray-700 font-medium capitalize">Mr.Kyaw Min</h3>
+                            <p class="text-xs text-gray-500">Sale Staff</p>
+                            <p class="text-xs text-gray-500">2020 ~ up to now</p>
+                        </div>
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </body>
+</html> 
+
+
+
