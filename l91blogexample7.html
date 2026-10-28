@@ -6,32 +6,99 @@
 
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+        <style type="text/css">
+            .burger-btn{
+                width: 24px;
+                height: 24px;
+                cursor: pointer;
+
+                position: relative;
+
+                transition :all 0.25s;
+            }
+
+            .line1,.line2,.line3{
+                width: 24px;
+                height: 3px;
+                background-color: #000;
+
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            .line2{
+                transform: translateY(7px);
+            }
+
+            .line3{
+                transform: translateY(14px);
+            }
+
+            .crossx .line1{
+                transform: rotate(45deg) translate(6px ,6px);
+            }
+
+            .crossx .line2{
+                display: none;   
+            }
+
+            .crossx .line3{
+                transform: rotate(-45deg) translate(-6px ,6px);
+            }
+
+            .crossx:hover .line1,.crossx:hover .line3{
+                background:#fff;
+            }
+        </style>
     </head>
     <body>
+
+        <!-- scroll loader -->
+        <div class="w-full">
+            <div class="w-full h-1 bg-gray-300 fixed left-0 top-0">
+                <div id="progressbar" class="h-full bg-blue-600">
+
+                </div>
+            </div>
+        </div>
+        <!-- scroll loader -->
     
         <!-- Start Header Section -->
         <header>
-            <nav>
+            <nav class="container mx-auto p-6">
 
-                <div>
+                <div class="flex justify-between my-6">
 
                     <!-- icon -->
-                    <div class="">
-                        <img src="" id="" class="" alt="favicon"><h2>DLT Photo Studio</h2>
+                    <div class="flex items-center">
+                        <img src="./img/img/fav/favicon.png" id="" class="w-16 mr-5" alt="favicon"><h2>DLT Photo Studio</h2>
                     </div>
 
                     <!-- menu -->
-                    <div class="">
-                        <a href="javascript:void(0);" class="hover:">Locations</a>
-                        <a href="javascript:void(0);" class="hover:">Equipments</a>
-                        <a href="javascript:void(0);" class="hover:">Blog</a>
-                        <a href="javascript:void(0);" class="hover:">FAQ</a>
-                        <a href="javascript:void(0);" class="hover:">Signup</a>
-                        <a href="javascript:void(0);" class="hover:">Login</a>
+                    <div class="hidden uppercase items-center space-x-10 md:flex">
+                        <a href="javascript:void(0);" class="tracking-wide hover:text-slate-900">Locations</a>
+                        <a href="javascript:void(0);" class="tracking-wide hover:text-slate-900">Equipments</a>
+                        <a href="javascript:void(0);" class="tracking-wide hover:text-slate-900">Blog</a>
+                        <a href="javascript:void(0);" class="tracking-wide hover:text-slate-900">FAQ</a>
+                        <a href="javascript:void(0);" class="tracking-wide hover:text-slate-900">Signup</a>
+                        <a href="javascript:void(0);" class="login-btn">Login</a>
+
+                        <div class="inline-block relative">
+                            <button id="contactbtn" class="bg-blue-900 text-white focus:outline-none py-1 px-3 contactbtn">Contact</button>
+
+                            <div id="contactmenu" class="w-24 bg-white border-gray-300 mt-2 absolute z-20">
+                                <a href="javascript:void(0);" class="block text-gray-700 hover:bg-gray-100 px-4 py-2" >Email</a>
+                                <a href="javascript:void(0);" class="block text-gray-700 hover:bg-gray-100 px-4 py-2" >Phone</a>
+                                <a href="javascript:void(0);" class="block text-gray-700 hover:bg-gray-100 px-4 py-2" >Social</a>
+                                <div class="border-t border-gray-300"></div>
+                                <a href="javascript:void(0);" class="block text-gray-700 hover:bg-gray-100 px-4 py-2" >Address</a>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- burger button -->
-                    <button type="button" id="menu-btn" class="">
+                    <button type="button" id="menu-btn" class="block md:hidden focus:outline-none burger-btn z-50">
                         <span class="line1"></span>
                         <span class="line2"></span>
                         <span class="line3"></span>
@@ -40,14 +107,14 @@
                 </div>
 
                 <!-- burger menu -->
-                <div>
-                    <div class=""><a href="javascript:void(0);" class="hover:">Locations</a></div>
-                    <div class=""><a href="javascript:void(0);" class="hover:">Equipments</a></div>
-                    <div class=""><a href="javascript:void(0);" class="hover:">Login</a></div>
-                    <div class=""><a href="javascript:void(0);" class="hover:">Blog</a></div>
-                    <div class=""><a href="javascript:void(0);" class="hover:">FAQ</a></div>
-                    <div class=""><a href="javascript:void(0);" class="hover:">Signup</a></div>
-                    <div class=""><a href="javascript:void(0);" class="hover:">Login</a></div>
+                <div id="mobilemenu" class="w-full h-full hidden bg-slate-500 text-white uppercase tracking-widest fixed inset-0 z-20 px-6 py-20 opacity-90">
+                    <div class="text-center py-3"><a href="javascript:void(0);" class="hover:text-blue-900">Locations</a></div>
+                    <div class="text-center py-3"><a href="javascript:void(0);" class="hover:text-blue-900">Equipments</a></div>
+                    <div class="text-center py-3"><a href="javascript:void(0);" class="hover:text-blue-900">Login</a></div>
+                    <div class="text-center py-3"><a href="javascript:void(0);" class="hover:text-blue-900">Blog</a></div>
+                    <div class="text-center py-3"><a href="javascript:void(0);" class="hover:text-blue-900">FAQ</a></div>
+                    <div class="text-center py-3"><a href="javascript:void(0);" class="hover:text-blue-900">Signup</a></div>
+                    <div class="text-center py-3"><a href="javascript:void(0);" class="hover:text-blue-900">Login</a></div>
                 </div>
 
             </nav>
@@ -56,30 +123,250 @@
 
         <!-- Start Banner Section -->
         <section>
-            
+            <div class="container flex flex-col-reverse md:flex-row mx-auto p-6">
+
+                <div class="space-y-10 md:w-1/2 md:mt-16">
+                    <h1 class="font-semibold text-center text-lg lg:text-left lg:text-3xl">That's Your The Best Studio!</h1>
+                    <p class="md:max-w-md text-center text-base md:text-left lg:text-2xl">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966</p>
+
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="javascript:void(0);" class="bg-indigo-500 text-white text-sm font-semibold rounded shadow border hover:bg-white hover:text-indigo-500 p-4">Quotation</a>
+                        <a href="javascript:void(0);" class="bg-gray-500 text-white text-sm font-semibold rounded shadow border hover:bg-white hover:text-indigo-500 p-4">Find Out</a>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 mx-auto mb-5 md:mb-0 md:mx-0">
+                    <img src="./img/img/etc/camera.png" class="w-[550px]" alt="">
+                </div>
+
+            </div>
         </section>
         <!-- End Banner Section -->
 
         <!-- Start Signup Section -->
+        <section class="container bg-blue-600 mx-auto px-8 py-[20px] md:py-[60px]">
+            <div class="flex flex-wrap items-center space-y-5">
+
+                <!-- caption -->
+                <div class="w-full md:w-1/2">
+                    <span class="text-base font-medium text-white">Find Your Next Dream Picture</span>
+                    <h2 class="text-3xl font-bold text-white">Get started with our studio</h2>
+                </div>
+
+                <!-- button -->
+                <div class="w-full md:w-1/2">
+                    <div class="flex md:justify-end">
+                        <a href="javascript:void(0);" class="bg-indigo-500 text-white text-sm font-semibold rounded shadow border hover:bg-white hover:text-indigo-500 p-4 mr-4">Show Me</a>
+                        <a href="javascript:void(0);" class="bg-gray-500 text-white text-sm font-semibold rounded shadow border hover:bg-white hover:text-indigo-500 p-4">Signs Up </a>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- End Signup Section -->
 
         <!-- Start FAQ Section -->
-        <section>
+        <section class="p-5">
+            <div class="container mx-auto">
+                <div class="w-full">
 
+                    <div class="border-b py-1 group" tabindex="1">
+                        <div class="text-gray-500 cursor-pointer flex justify-between items-center py-3">
+                            <h2 class="group-hover:text-red-500">Photography & Flim Studio ?</h2>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+
+                        <div class="max-h-0 overflow-hidden group-focus:max-h-screen">
+                            <p class="text-gray-400 text-justify py-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966</p>
+                        </div>
+                    </div>
+
+                    <div class="border-b py-1 group" tabindex="2">
+                        <div class="text-gray-500 cursor-pointer flex justify-between items-center py-3">
+                            <h2 class="group-hover:text-red-500">Studio Photography & Videography ?</h2>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+
+                        <div class="max-h-0 overflow-hidden group-focus:max-h-screen">
+                            <p class="text-gray-400 text-justify py-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966</p>
+                        </div>
+                    </div>
+
+                    <div class="border-b py-1 group" tabindex="3">
+                        <div class="text-gray-500 cursor-pointer flex justify-between items-center py-3">
+                            <h2 class="group-hover:text-red-500">Photography/Flim Studio ?</h2>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+
+                        <div class="max-h-0 overflow-hidden group-focus:max-h-screen">
+                            <p class="text-gray-400 text-justify py-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966</p>
+                        </div>
+                    </div>
+
+                    <div class="border-b py-1 group" tabindex="4">
+                        <div class="text-gray-500 cursor-pointer flex justify-between items-center py-3">
+                            <h2 class="group-hover:text-red-500">Luxiry Daylight Photo & Content Studio ?</h2>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+
+                        <div class="max-h-0 overflow-hidden group-focus:max-h-screen">
+                            <p class="text-gray-400 text-justify py-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </section>
         <!-- End FAQ Section -->
 
         <!-- Start Component Section -->
-        <section>
+        <section class="py-5">
+            <div class="container mx-auto">
+                <div class="flex" style="height:300px;">
 
+                    <div class="md:w-1/2 text-center flex items-center md:text-left px-8 md:px-12">
+                        <div>
+                            <h2 class="text-gray-800 font-semibold md:text-3xl">Build Your New <span class="text-indigo-700">Idea Picture</span></h2>
+                            <p class="text-gray-500 text-sm md:text-base">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966</p>
+                            <div class="flex justify-center md:justify-start mt-6">
+                                <a href="javascript:void(0);" class="bg-gray-900 text-gray-300 text-sm font-semibold rounded shadow hover:bg-gray-700 p-4 py-3 mx-4">Get Started</a>
+                                <a href="javascript:void(0);" class="bg-gray-300 text-gray-900 text-sm font-semibold rounded shadow hover:bg-gray-400 p-4 py-3">Find Out</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden md:block md:w-1/2" style="clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);">
+                        <div class="h-full object-cover" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXgR23cU-xVtCl_jdn7i4pJLdyCnu4SxZoOrepWdjy787geEsoOdZX5B4&s=10');">
+                            <div class="h-full bg-black opacity-25"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </section>
         <!-- End Component Section -->
 
-        <!-- Start Footer Section -->
-        <footer>
+        <!-- Start Service Section -->
+        <section>   
+            <div class="container px-6 py-4 mx-auto">
+                <div class="grid gap-6 mb-8 md:grid-cols-4">
 
+                    <div class="bg-white border-2 border-gray-200 rounded-lg shadow flex items-center p-4">
+                        <div class="bg-blue-600 text-white rounded-full p-3 mr-4">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div>
+                            <span class="block text-gray-900 text-sm font-medium mb-3">Transportation</span>
+                            <span class="block text-gray-900 text-sm font-normal">Service For Wedding</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border-2 border-gray-200 rounded-lg shadow flex items-center p-4">
+                        <div class="bg-blue-600 text-white rounded-full p-3 mr-4">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div>
+                            <span class="block text-gray-900 text-sm font-medium mb-3">Transportation</span>
+                            <span class="block text-gray-900 text-sm font-normal">Service For Wedding</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border-2 border-gray-200 rounded-lg shadow flex items-center p-4">
+                        <div class="bg-blue-600 text-white rounded-full p-3 mr-4">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div>
+                            <span class="block text-gray-900 text-sm font-medium mb-3">Transportation</span>
+                            <span class="block text-gray-900 text-sm font-normal">Service For Wedding</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border-2 border-gray-200 rounded-lg shadow flex items-center p-4">
+                        <div class="bg-blue-600 text-white rounded-full p-3 mr-4">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div>
+                            <span class="block text-gray-900 text-sm font-medium mb-3">Transportation</span>
+                            <span class="block text-gray-900 text-sm font-normal">Service For Wedding</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Service Section -->
+
+        <!-- Start Footer Section -->
+        <footer class="bg-black py-8">
+            <div class="container space-y-16 flex flex-col justify-between items:center md:flex-row md:space-y-0 mx-auto">
+                <div class="text-white flex space-x-10">
+                    <a href="javascript:void(0);" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="javascript:void(0);" target="_blank"><i class="fab fa-google"></i></a>
+                    <a href="javascript:void(0);" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+                <div class="text-gray-400 font-light space-y-6 flex flex-col justify-between items-center md:flex-row md:space-x-14">
+                    <img src="./img/img/fav/favicon.png" class="w-16" alt="favicon">
+                    <a href="javascript:void(0);" class="uppercase text-sm hover:text-red-600 ">Location</a>
+                    <a href="javascript:void(0);" class="uppercase text-sm hover:text-red-600 ">Equipment</a>
+                    <a href="javascript:void(0);" class="uppercase text-sm hover:text-red-600 ">Blog</a>
+                    <a href="javascript:void(0);" class="uppercase text-sm hover:text-red-600 ">FAQ</a>
+                </div>
+            </div>
         </footer>
         <!-- End Footer Section -->
+
+        <script type="text/javascript">
+
+            const getmenubtn = document.getElementById('menu-btn');
+            const getmobilemenu = document.getElementById('mobilemenu');
+
+            getmenubtn.addEventListener('click',function(){
+                getmenubtn.classList.toggle('crossx');
+                getmobilemenu.classList.toggle('hidden');
+            });
+
+            window.addEventListener('resize',function(){
+                if(window.innerWidth >= 768){
+                    getmenubtn.classList.remove('crossx');
+                    getmobilemenu.classList.add('hidden');
+                }
+            });
+
+            // scroll loader 
+
+            window.addEventListener('scroll',function(){
+
+                let getbar = document.querySelector('#progressbar');
+
+                let getscrolltop = document.documentElement.scrollTop;
+                // console.log(getscrolltop); // 
+
+                let getscrollheight = document.documentElement.scrollHeight;
+                // console.log(getscrollheight);
+
+                let getclientheight = document.documentElement.clientHeight;
+                // console.log(getclientheight);
+
+                let calheight = getscrollheight - getclientheight;
+
+                // let result = Math.round(getscrolltop * 100 / calheight);
+                let result = Math.round((getscrolltop / calheight) * 100);
+
+                getbar.style.width = `${result}%`;
+
+
+            });
+
+            // dropdown contact menu 
+
+            const getcontactbtn = document.getElementById('contactbtn');
+            const getcontactmenu = document.getElementById('contactmenu');
+
+            getcontactbtn.addEventListener('click',()=>{
+                getcontactmenu.classList.toggle('hidden');
+            })
+
+        </script>
       
     </body>
 </html> 
